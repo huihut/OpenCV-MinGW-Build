@@ -32,7 +32,7 @@ LIBS += -LE:\OpenCV_3.3.1\OpenCV-MinGW-Build\bin \
     -llibopencv_core331 \
     -llibopencv_dnn331 \
     -llibopencv_features2d331 \
-    -llibopencv_flann3311 \
+    -llibopencv_flann331 \
     -llibopencv_highgui331 \
     -llibopencv_imgcodecs331 \
     -llibopencv_imgproc331 \
