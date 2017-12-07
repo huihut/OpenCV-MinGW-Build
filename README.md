@@ -9,7 +9,7 @@ Compiled OpenCV3.3.1 for MinGW32
 * MinGW-5.3.0-32bit
 * CMake-3.9.2
 
-## Qt config
+## Configure Qt
 
 Add OpenCV library file and include path to Qt `.pro` file.
 
