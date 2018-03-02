@@ -210,11 +210,15 @@ public:
 
     virtual void write( FileStorage&) const;
 
-    virtual void read( const FileNode&);
+    // see corresponding cv::Algorithm method
+    CV_WRAP virtual void read( const FileNode&);
 
     //! Return true if detector object is empty
     CV_WRAP virtual bool empty() const;
     CV_WRAP virtual String getDefaultName() const;
+
+    // see corresponding cv::Algorithm method
+    CV_WRAP inline void write(const Ptr<FileStorage>& fs, const String& name = String()) const { Algorithm::write(fs, name); }
 };
 
 /** Feature detectors in OpenCV have wrappers with a common interface that enables you to easily switch
@@ -300,10 +304,11 @@ public:
     will mean that to cover certain scale range you will need more pyramid levels and so the speed
     will suffer.
     @param nlevels The number of pyramid levels. The smallest level will have linear size equal to
-    input_image_linear_size/pow(scaleFactor, nlevels).
+    input_image_linear_size/pow(scaleFactor, nlevels - firstLevel).
     @param edgeThreshold This is size of the border where the features are not detected. It should
     roughly match the patchSize parameter.
-    @param firstLevel It should be 0 in the current implementation.
+    @param firstLevel The level of pyramid to put source image to. Previous layers are filled
+    with upscaled source image.
     @param WTA_K The number of points that produce each element of the oriented BRIEF descriptor. The
     default value 2 means the BRIEF where we take a random point pair and compare their brightnesses,
     so we get 0/1 response. Other possible values are 3 and 4. For example, 3 means that we take 3
@@ -377,7 +382,7 @@ public:
     @param _delta it compares \f$(size_{i}-size_{i-delta})/size_{i-delta}\f$
     @param _min_area prune the area which smaller than minArea
     @param _max_area prune the area which bigger than maxArea
-    @param _max_variation prune the area have simliar size to its children
+    @param _max_variation prune the area have similar size to its children
     @param _min_diversity for color image, trace back to cut off mser with diversity less than min_diversity
     @param _max_evolution  for color image, the evolution steps
     @param _area_threshold for color image, the area threshold to cause re-initialize
@@ -782,7 +787,7 @@ struct CV_EXPORTS SL2
  * Euclidean distance functor
  */
 template<class T>
-struct CV_EXPORTS L2
+struct L2
 {
     enum { normType = NORM_L2 };
     typedef T ValueType;
@@ -798,7 +803,7 @@ struct CV_EXPORTS L2
  * Manhattan distance (city block distance) functor
  */
 template<class T>
-struct CV_EXPORTS L1
+struct L1
 {
     enum { normType = NORM_L1 };
     typedef T ValueType;
@@ -985,7 +990,8 @@ public:
         read(fs.root());
     }
     // Reads matcher object from a file node
-    virtual void read( const FileNode& );
+    // see corresponding cv::Algorithm method
+    CV_WRAP virtual void read( const FileNode& );
     // Writes matcher object to a file storage
     virtual void write( FileStorage& ) const;
 
@@ -1011,6 +1017,10 @@ public:
     CV_WRAP static Ptr<DescriptorMatcher> create( const String& descriptorMatcherType );
 
     CV_WRAP static Ptr<DescriptorMatcher> create( int matcherType );
+
+
+    // see corresponding cv::Algorithm method
+    CV_WRAP inline void write(const Ptr<FileStorage>& fs, const String& name = String()) const { Algorithm::write(fs, name); }
 
 protected:
     /**

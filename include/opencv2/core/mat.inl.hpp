@@ -508,7 +508,6 @@ Mat::Mat(int _rows, int _cols, int _type, void* _data, size_t _step)
     }
     else
     {
-        if( rows == 1 ) _step = minstep;
         CV_DbgAssert( _step >= minstep );
 
         if (_step % esz1 != 0)
@@ -516,7 +515,8 @@ Mat::Mat(int _rows, int _cols, int _type, void* _data, size_t _step)
             CV_Error(Error::BadStep, "Step must be a multiple of esz1");
         }
 
-        flags |= _step == minstep ? CONTINUOUS_FLAG : 0;
+        if (_step == minstep || rows == 1)
+            flags |= CONTINUOUS_FLAG;
     }
     step[0] = _step;
     step[1] = esz;
@@ -541,7 +541,6 @@ Mat::Mat(Size _sz, int _type, void* _data, size_t _step)
     }
     else
     {
-        if( rows == 1 ) _step = minstep;
         CV_DbgAssert( _step >= minstep );
 
         if (_step % esz1 != 0)
@@ -549,7 +548,8 @@ Mat::Mat(Size _sz, int _type, void* _data, size_t _step)
             CV_Error(Error::BadStep, "Step must be a multiple of esz1");
         }
 
-        flags |= _step == minstep ? CONTINUOUS_FLAG : 0;
+        if (_step == minstep || rows == 1)
+            flags |= CONTINUOUS_FLAG;
     }
     step[0] = _step;
     step[1] = esz;
@@ -583,6 +583,18 @@ Mat::Mat(const std::initializer_list<_Tp> list)
     if(list.size() == 0)
         return;
     Mat((int)list.size(), 1, traits::Type<_Tp>::value, (uchar*)list.begin()).copyTo(*this);
+}
+
+template<typename _Tp> inline
+Mat::Mat(const std::initializer_list<int> sizes, const std::initializer_list<_Tp> list)
+    : Mat()
+{
+    size_t size_total = 1;
+    int *sz = (int*)sizes.begin();
+    for(auto s : sizes)
+        size_total *= s;
+    CV_Assert(list.size() != 0 || size_total == list.size());
+    Mat((int)sizes.size(), sz, traits::Type<_Tp>::value, (uchar*)list.begin()).copyTo(*this);
 }
 #endif
 
@@ -1628,6 +1640,11 @@ Mat_<_Tp>::Mat_(const std::vector<_Tp>& vec, bool copyData)
 template<typename _Tp> inline
 Mat_<_Tp>::Mat_(std::initializer_list<_Tp> list)
     : Mat(list)
+{}
+
+template<typename _Tp> inline
+Mat_<_Tp>::Mat_(const std::initializer_list<int> sizes, std::initializer_list<_Tp> list)
+    : Mat(sizes, list)
 {}
 #endif
 
@@ -3910,9 +3927,6 @@ inline void UMatData::markDeviceCopyObsolete(bool flag)
     else
         flags &= ~DEVICE_COPY_OBSOLETE;
 }
-
-inline UMatDataAutoLock::UMatDataAutoLock(UMatData* _u) : u(_u) { u->lock(); }
-inline UMatDataAutoLock::~UMatDataAutoLock() { u->unlock(); }
 
 //! @endcond
 

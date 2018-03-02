@@ -340,16 +340,9 @@ public:
     CV_WRAP FileStorage();
 
     /** @overload
-    @param source Name of the file to open or the text string to read the data from. Extension of the
-    file (.xml, .yml/.yaml, or .json) determines its format (XML, YAML or JSON respectively). Also you can
-    append .gz to work with compressed files, for example myHugeMatrix.xml.gz. If both FileStorage::WRITE
-    and FileStorage::MEMORY flags are specified, source is used just to specify the output file format (e.g.
-    mydata.xml, .yml etc.).
-    @param flags Mode of operation. See  FileStorage::Mode
-    @param encoding Encoding of the file. Note that UTF-16 XML encoding is not supported currently and
-    you should use 8-bit encoding instead of it.
+    @copydoc open()
     */
-    CV_WRAP FileStorage(const String& source, int flags, const String& encoding=String());
+    CV_WRAP FileStorage(const String& filename, int flags, const String& encoding=String());
 
     /** @overload */
     FileStorage(CvFileStorage* fs, bool owning=true);
@@ -858,7 +851,9 @@ namespace internal
             size_t remaining = it->remaining;
             size_t cn = DataType<_Tp>::channels;
             int _fmt = traits::SafeFmt<_Tp>::fmt;
+            CV_Assert((_fmt >> 8) < 9);
             char fmt[] = { (char)((_fmt >> 8)+'1'), (char)_fmt, '\0' };
+            CV_Assert((remaining % cn) == 0);
             size_t remaining1 = remaining / cn;
             count = count < remaining1 ? count : remaining1;
             vec.resize(count);

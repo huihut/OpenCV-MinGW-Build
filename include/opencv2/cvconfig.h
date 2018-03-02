@@ -96,7 +96,7 @@
 /* #undef HAVE_HALIDE */
 
 /* Define to 1 if you have the <inttypes.h> header file. */
-/* #undef HAVE_INTTYPES_H */
+#define HAVE_INTTYPES_H 1
 
 /* Intel Perceptual Computing SDK library */
 /* #undef HAVE_INTELPERC */
