@@ -2,7 +2,7 @@
 
 MinGW version of OpenCV compiled on Windows.
 
-* OpenCV 3.3.1
+* [OpenCV 3.3.1](https://github.com/huihut/OpenCV-MinGW-Build/tree/OpenCV-3.3.1)
 * OpenCV 3.4.1
 
 ## Compiling Environment
