@@ -1,24 +1,31 @@
 # OpenCV-MinGW-Build
 
-Compiled OpenCV3.3.1 for MinGW32
+MinGW version of OpenCV compiled on Windows.
 
-## Environment
+* OpenCV 3.3.1
+* OpenCV 3.4.1
+
+## Compiling Environment
 
 * Windows-10-64bit
-* OpenCV-3.3.1
 * MinGW-5.3.0-32bit
 * CMake-3.9.2
 
-## Qt
+## How to compile OpenCV
+
+* [wiki.qt . How to setup Qt and openCV on Windows](https://wiki.qt.io/How_to_setup_Qt_and_openCV_on_Windows)
+* [blog.huihut . OpenCV使用CMake和MinGW的编译安装及其在Qt配置运行](https://blog.huihut.com/2017/12/03/CompiledOpenCVRunInQt/)
+
+## Using OpenCV in Qt
 
 Add OpenCV library file and include path to Qt `.pro` file.
 
-My OpenCV file is located in `E:\OpenCV_3.3.1\OpenCV-MinGW-Build`
+My OpenCV file is located in `E:\OpenCV-MinGW-Build`, So the configuration is as follows:
 
 ```
 win32 {
-INCLUDEPATH += E:\OpenCV_3.3.1\OpenCV-MinGW-Build\include
-LIBS += E:\OpenCV_3.3.1\OpenCV-MinGW-Build\bin\libopencv_*.dll
+INCLUDEPATH += E:\OpenCV-MinGW-Build\include
+LIBS += E:\OpenCV-MinGW-Build\bin\libopencv_*.dll
 }
 ```
 
@@ -26,8 +33,8 @@ or
 
 ```
 win32 {
-INCLUDEPATH += E:\OpenCV_3.3.1\OpenCV-MinGW-Build\include
-LIBS += -LE:\OpenCV_3.3.1\OpenCV-MinGW-Build\bin \
+INCLUDEPATH += E:\OpenCV-MinGW-Build\include
+LIBS += -LE:\OpenCV-MinGW-Build\bin \
     -llibopencv_calib3d331 \
     -llibopencv_core331 \
     -llibopencv_dnn331 \
@@ -48,6 +55,3 @@ LIBS += -LE:\OpenCV_3.3.1\OpenCV-MinGW-Build\bin \
 }
 ```
 
-## Compile & Tutorials
-
-[OpenCV使用CMake和MinGW的编译安装及其在Qt配置运行](http://blog.csdn.net/huihut/article/details/78701814)
