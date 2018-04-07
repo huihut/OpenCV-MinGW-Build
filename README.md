@@ -14,8 +14,6 @@ git clone -b OpenCV-3.4.1 git@github.com:huihut/OpenCV-MinGW-Build.git
 git clone -b OpenCV-3.3.1 git@github.com:huihut/OpenCV-MinGW-Build.git
 ```
 
-
-
 ## Compiling Environment
 
 * Windows-10-64bit
@@ -31,10 +29,10 @@ git clone -b OpenCV-3.3.1 git@github.com:huihut/OpenCV-MinGW-Build.git
 
 Add OpenCV library file and include path to Qt `.pro` file.
 
-* My version of OpenCV: OpenCV 3.3.1
-* My OpenCV path
+* My version of OpenCV : `OpenCV 3.3.1`
+* My OpenCV path : `E:\OpenCV_3.3.1\OpenCV-MinGW-Build`
 
-My OpenCV file is located in `E:\OpenCV_3.3.1\OpenCV-MinGW-Build`, So the configuration is as follows:
+So the configuration is as follows (**You need to modify it according to your OpenCV.**) :
 
 ```
 win32 {
