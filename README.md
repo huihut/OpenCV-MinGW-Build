@@ -1,29 +1,48 @@
 # OpenCV-MinGW-Build
 
-MinGW version of OpenCV compiled on Windows.
+MinGW 32bit and 64bit version of OpenCV compiled on Windows.
 
-## [OpenCV 3.4.1](https://github.com/huihut/OpenCV-MinGW-Build/tree/OpenCV-3.4.1)
+## MinGW32
+
+### Compiling Environment
+
+* MinGW-x32-5.3.0
+* Windows-10-64bit
+* CMake-3.9.2
+
+### [OpenCV 3.4.1](https://github.com/huihut/OpenCV-MinGW-Build/tree/OpenCV-3.4.1)
 
 ```
 git clone -b OpenCV-3.4.1 git@github.com:huihut/OpenCV-MinGW-Build.git
 ```
 
-## [OpenCV 3.3.1](https://github.com/huihut/OpenCV-MinGW-Build/tree/OpenCV-3.3.1)
+### [OpenCV 3.3.1](https://github.com/huihut/OpenCV-MinGW-Build/tree/OpenCV-3.3.1)
 
 ```
 git clone -b OpenCV-3.3.1 git@github.com:huihut/OpenCV-MinGW-Build.git
 ```
 
-## Compiling Environment
+## MinGW-w64
 
+### Compiling Environment
+
+* MinGW-x64-4.8.1-release-posix-seh-rev5
 * Windows-10-64bit
-* MinGW-5.3.0-32bit
-* CMake-3.9.2
+* CMake-3.12.0
+
+### [OpenCV 3.4.1-x64](https://github.com/huihut/OpenCV-MinGW-Build/tree/OpenCV-3.4.1-x64) 
+
+Unselected `WITH_QT`
+
+```
+git clone -b OpenCV-3.4.1-x64 git@github.com:huihut/OpenCV-MinGW-Build.git
+```
 
 ## How to compile OpenCV
 
-* [wiki.qt . How to setup Qt and openCV on Windows](https://wiki.qt.io/How_to_setup_Qt_and_openCV_on_Windows)
 * [blog.huihut . OpenCV使用CMake和MinGW的编译安装及其在Qt配置运行](https://blog.huihut.com/2017/12/03/CompiledOpenCVRunInQt/)
+* [wiki.qt . How to setup Qt and openCV on Windows](https://wiki.qt.io/How_to_setup_Qt_and_openCV_on_Windows)
+* [Tutorial: Installation from source for Windows with Mingw-w64](http://visp-doc.inria.fr/doxygen/visp-daily/tutorial-install-win10-mingw64.html)
 
 ## Using OpenCV in Qt
 
