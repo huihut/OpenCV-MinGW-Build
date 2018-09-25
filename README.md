@@ -38,6 +38,12 @@ Unselected `WITH_QT`
 git clone -b OpenCV-3.4.1-x64 git@github.com:huihut/OpenCV-MinGW-Build.git
 ```
 
+### [OpenCV 4.0.0-alpha-x64](https://github.com/huihut/OpenCV-MinGW-Build/tree/OpenCV-4.0.0-alpha-x64)
+
+```
+git clone -b OpenCV-4.0.0-alpha-x64 git@github.com:huihut/OpenCV-MinGW-Build.git
+```
+
 ## How to compile OpenCV
 
 * [blog.huihut . OpenCV使用CMake和MinGW的编译安装及其在Qt配置运行](https://blog.huihut.com/2017/12/03/CompiledOpenCVRunInQt/)
