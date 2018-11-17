@@ -4,7 +4,7 @@ MinGW 32bit and 64bit version of OpenCV compiled on Windows.
 
 ## Releases
 
-### [OpenCV 4.0.0-rc-x64](https://github.com/huihut/OpenCV-MinGW-Build/tree/OpenCV-4.0.0-rc-x64) 
+### [OpenCV 4.0.0-rc-x64](https://github.com/huihut/OpenCV-MinGW-Build/tree/OpenCV-4.0.0-rc-x64) | [zip](https://github.com/huihut/OpenCV-MinGW-Build/archive/OpenCV-4.0.0-rc-x64.zip) | [tar.gz](https://github.com/huihut/OpenCV-MinGW-Build/archive/OpenCV-4.0.0-rc-x64.tar.gz)
 
 ```
 git clone -b OpenCV-4.0.0-rc-x64 git@github.com:huihut/OpenCV-MinGW-Build.git
@@ -121,7 +121,7 @@ General configuration for OpenCV 4.0.0-rc =====================================
 
 </details>
 
-### [OpenCV 4.0.0-alpha-x64](https://github.com/huihut/OpenCV-MinGW-Build/tree/OpenCV-4.0.0-alpha-x64)
+### [OpenCV 4.0.0-alpha-x64](https://github.com/huihut/OpenCV-MinGW-Build/tree/OpenCV-4.0.0-alpha-x64) | [zip](https://github.com/huihut/OpenCV-MinGW-Build/archive/OpenCV-4.0.0-alpha-x64.zip) | [tar.gz](https://github.com/huihut/OpenCV-MinGW-Build/archive/OpenCV-4.0.0-alpha-x64.tar.gz)
 
 ```
 git clone -b OpenCV-4.0.0-alpha-x64 git@github.com:huihut/OpenCV-MinGW-Build.git
@@ -240,7 +240,7 @@ General configuration for OpenCV 4.0.0-alpha ===================================
 </details>
 
 
-### [OpenCV 3.4.1-x64](https://github.com/huihut/OpenCV-MinGW-Build/tree/OpenCV-3.4.1-x64) 
+### [OpenCV 3.4.1-x64](https://github.com/huihut/OpenCV-MinGW-Build/tree/OpenCV-3.4.1-x64)  | [zip](https://github.com/huihut/OpenCV-MinGW-Build/archive/OpenCV-3.4.1-x64.zip) | [tar.gz](https://github.com/huihut/OpenCV-MinGW-Build/archive/OpenCV-3.4.1-x64.tar.gz)
 
 ```
 git clone -b OpenCV-3.4.1-x64 git@github.com:huihut/OpenCV-MinGW-Build.git
@@ -360,7 +360,7 @@ General configuration for OpenCV 3.4.1 =====================================
 
 </details>
 
-### [OpenCV 3.4.1](https://github.com/huihut/OpenCV-MinGW-Build/tree/OpenCV-3.4.1)
+### [OpenCV 3.4.1](https://github.com/huihut/OpenCV-MinGW-Build/tree/OpenCV-3.4.1) | [zip](https://github.com/huihut/OpenCV-MinGW-Build/archive/OpenCV-3.4.1.zip) | [tar.gz](https://github.com/huihut/OpenCV-MinGW-Build/archive/OpenCV-3.4.1.tar.gz)
 
 ```
 git clone -b OpenCV-3.4.1 git@github.com:huihut/OpenCV-MinGW-Build.git
@@ -374,7 +374,7 @@ git clone -b OpenCV-3.4.1 git@github.com:huihut/OpenCV-MinGW-Build.git
 
 </details>
 
-### [OpenCV 3.3.1](https://github.com/huihut/OpenCV-MinGW-Build/tree/OpenCV-3.3.1)
+### [OpenCV 3.3.1](https://github.com/huihut/OpenCV-MinGW-Build/tree/OpenCV-3.3.1) | [zip](https://github.com/huihut/OpenCV-MinGW-Build/archive/OpenCV-3.3.1.zip) | [tar.gz](https://github.com/huihut/OpenCV-MinGW-Build/archive/OpenCV-3.3.1.tar.gz)
 
 ```
 git clone -b OpenCV-3.3.1 git@github.com:huihut/OpenCV-MinGW-Build.git
@@ -400,6 +400,10 @@ git clone -b OpenCV-3.3.1 git@github.com:huihut/OpenCV-MinGW-Build.git
 ### Using OpenCV in Visual Studio Code
 
 * [Running a C++ program with OpenCV 3.4.1 using MinGW-w64 g++ in Visual Studio Code on Windows 10 x64](https://stackoverflow.com/questions/51622111/opencv-c-mingw-vscode-fatal-error-to-compile/51801863#51801863)
+
+### Using OpenCV in Visual Studio
+
+* [How to build applications with OpenCV inside the Microsoft Visual Studio](https://docs.opencv.org/2.4/doc/tutorials/introduction/windows_visual_studio_Opencv/windows_visual_studio_Opencv.html)
 
 ### Using OpenCV in Qt
 * [wiki.qt . How to setup Qt and openCV on Windows](https://wiki.qt.io/How_to_setup_Qt_and_openCV_on_Windows)
