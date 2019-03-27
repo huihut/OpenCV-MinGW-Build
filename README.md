@@ -17,11 +17,11 @@ git clone -b OpenCV-4.0.1-x64 git@github.com:huihut/OpenCV-MinGW-Build.git
 * CMake-3.12.4
 
 ```
-General configuration for OpenCV 4.0.0 =====================================
+General configuration for OpenCV 4.0.1 =====================================
   Version control:               unknown
 
   Platform:
-    Timestamp:                   2019-01-02T16:04:40Z
+    Timestamp:                   2019-03-27T15:25:27Z
     Host:                        Windows 10.0.17763 AMD64
     CMake:                       3.12.4
     CMake generator:             MinGW Makefiles
@@ -42,16 +42,16 @@ General configuration for OpenCV 4.0.0 =====================================
   C/C++:
     Built as dynamic libs?:      YES
     C++ Compiler:                E:/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/g++.exe  (ver 8.1.0)
-    C++ flags (Release):         -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wsuggest-override -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -O3 -DNDEBUG  -DNDEBUG
-    C++ flags (Debug):           -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wsuggest-override -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -g  -O0 -DDEBUG -D_DEBUG
+    C++ flags (Release):         -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -O3 -DNDEBUG  -DNDEBUG
+    C++ flags (Debug):           -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -g  -O0 -DDEBUG -D_DEBUG
     C Compiler:                  E:/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/gcc.exe
     C flags (Release):           -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -O3 -DNDEBUG  -DNDEBUG
     C flags (Debug):             -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -g  -O0 -DDEBUG -D_DEBUG
     Linker flags (Release):      -Wl,--gc-sections  
     Linker flags (Debug):        -Wl,--gc-sections  
     ccache:                      NO
-    Precompiled headers:         NO
-    Extra dependencies:          opengl32 glu32
+    Precompiled headers:         YES
+    Extra dependencies:
     3rdparty dependencies:
 
   OpenCV modules:
@@ -67,7 +67,6 @@ General configuration for OpenCV 4.0.0 =====================================
 
   GUI: 
     Win32 UI:                    YES
-    OpenGL support:              YES (opengl32 glu32)
     VTK support:                 NO
 
   Media I/O: 
@@ -105,14 +104,14 @@ General configuration for OpenCV 4.0.0 =====================================
     Protobuf:                    build (3.5.1)
 
   OpenCL:                        YES (no extra features)
-    Include path:                E:/opencv-4.0.0/opencv-4.0.0/3rdparty/include/opencl/1.2
+    Include path:                E:/opencv-4.0.1/opencv-4.0.1/3rdparty/include/opencl/1.2
     Link libraries:              Dynamic load
 
-  Python (for build):            NO
+  Python (for build):            C:/Users/huihu/AppData/Local/Programs/Python/Python37-32/python.exe
 
   Java:                          
     ant:                         NO
-    JNI:                         NO
+    JNI:                         C:/Program Files/Java/jdk1.8.0_191/include C:/Program Files/Java/jdk1.8.0_191/include/win32 C:/Program Files/Java/jdk1.8.0_191/include
     Java wrappers:               NO
     Java tests:                  NO
 
