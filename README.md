@@ -482,7 +482,7 @@ git clone -b OpenCV-3.4.6 git@github.com:huihut/OpenCV-MinGW-Build.git
 
 <details><summary>Configuration</summary> 
 
-* MinGW-x32-7.3.0
+* MinGW-x86-7.3.0
 * Windows-10-64bit
 * CMake-3.14.1
 
@@ -600,7 +600,7 @@ git clone -b OpenCV-3.4.5 git@github.com:huihut/OpenCV-MinGW-Build.git
 
 <details><summary>Configuration</summary> 
 
-* MinGW-x32-5.3.0
+* MinGW-x86-5.3.0
 * Windows-10-64bit
 * CMake-3.12.4
 
@@ -838,7 +838,7 @@ git clone -b OpenCV-3.4.1 git@github.com:huihut/OpenCV-MinGW-Build.git
 
 <details><summary>Configuration</summary> 
 
-* MinGW-x32-5.3.0
+* MinGW-x86-5.3.0
 * Windows-10-64bit
 * CMake-3.9.2
 
@@ -852,7 +852,7 @@ git clone -b OpenCV-3.3.1 git@github.com:huihut/OpenCV-MinGW-Build.git
 
 <details><summary>Configuration</summary> 
 
-* MinGW-x32-5.3.0
+* MinGW-x86-5.3.0
 * Windows-10-64bit
 * CMake-3.9.2
 
