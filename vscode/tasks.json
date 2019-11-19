@@ -10,7 +10,7 @@
             "args": [
                 "${file}",
                 "-o",
-                "${fileBasenameNoExtension}.exe",
+                "${fileDirname}/${fileBasenameNoExtension}.exe",
                 "-IC:/Library/opencv-3.4.8/build/install/include",
                 "-LC:/Library/opencv-3.4.8/build/install/x64/mingw/bin",
                 "-llibopencv_calib3d348",
