@@ -1,0 +1,40 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build it",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "${file}",
+                "-o",
+                "${fileBasenameNoExtension}.exe",
+                "-IC:/Library/opencv-3.4.8/build/install/include",
+                "-LC:/Library/opencv-3.4.8/build/install/x64/mingw/bin",
+                "-llibopencv_calib3d348",
+                "-llibopencv_core348",
+                "-llibopencv_dnn348",
+                "-llibopencv_features2d348",
+                "-llibopencv_flann348",
+                "-llibopencv_highgui348",
+                "-llibopencv_imgcodecs348",
+                "-llibopencv_imgproc348",
+                "-llibopencv_ml348",
+                "-llibopencv_objdetect348",
+                "-llibopencv_photo348",
+                "-llibopencv_shape348",
+                "-llibopencv_stitching348",
+                "-llibopencv_superres348",
+                "-llibopencv_video348",
+                "-llibopencv_videoio348",
+                "-llibopencv_videostab348"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
