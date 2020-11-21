@@ -4,6 +4,130 @@ MinGW 32bit and 64bit version of OpenCV compiled on Windows.
 
 ## Releases
 
+### [OpenCV-4.5.0-with-contrib](https://github.com/huihut/OpenCV-MinGW-Build/tree/OpenCV-4.5.0-with-contrib) | [zip](https://github.com/huihut/OpenCV-MinGW-Build/archive/OpenCV-4.5.0-with-contrib.zip) | [tar.gz](https://github.com/huihut/OpenCV-MinGW-Build/archive/OpenCV-4.5.0-with-contrib.tar.gz)
+
+```
+git clone -b OpenCV-4.5.0-with-contrib git@github.com:huihut/OpenCV-MinGW-Build.git
+```
+
+<details><summary>Configuration</summary> 
+
+* MinGW-x86-7.3.0
+* Windows-10-64bit
+* CMake-3.18.4
+
+```
+General configuration for OpenCV 4.5.0 =====================================
+  Version control:               unknown
+
+  Extra modules:
+    Location (extra):            E:\\opencv-4.5.0\\opencv_contrib-4.5.0\\modules
+    Version control (extra):     unknown
+
+  Platform:
+    Timestamp:                   2020-11-21T18:57:32Z
+    Host:                        Windows 10.0.19041 AMD64
+    CMake:                       3.18.4
+    CMake generator:             MinGW Makefiles
+    CMake build tool:            E:/Qt/Qt5.13.0/Tools/mingw730_32/bin/mingw32-make.exe
+    Configuration:               Release
+
+  CPU/HW features:
+    Baseline:                    SSE SSE2
+      requested:                 SSE2
+    Dispatched code generation:  SSE4_1 SSE4_2 FP16 AVX
+      requested:                 SSE4_1 SSE4_2 AVX FP16
+      SSE4_1 (18 files):         + SSE3 SSSE3 SSE4_1
+      SSE4_2 (2 files):          + SSE3 SSSE3 SSE4_1 POPCNT SSE4_2
+      FP16 (1 files):            + SSE3 SSSE3 SSE4_1 POPCNT SSE4_2 FP16 AVX
+      AVX (5 files):             + SSE3 SSSE3 SSE4_1 POPCNT SSE4_2 AVX
+
+  C/C++:
+    Built as dynamic libs?:      YES
+    C++ standard:                11
+    C++ Compiler:                E:/Qt/Qt5.13.0/Tools/mingw730_32/bin/g++.exe  (ver 7.3.0)
+    C++ flags (Release):         -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -mfpmath=sse -fvisibility=hidden -fvisibility-inlines-hidden -O3 -DNDEBUG  -DNDEBUG
+    C++ flags (Debug):           -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -mfpmath=sse -fvisibility=hidden -fvisibility-inlines-hidden -g  -O0 -DDEBUG -D_DEBUG
+    C Compiler:                  E:/Qt/Qt5.13.0/Tools/mingw730_32/bin/gcc.exe
+    C flags (Release):           -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -mfpmath=sse -fvisibility=hidden -O3 -DNDEBUG  -DNDEBUG
+    C flags (Debug):             -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -mfpmath=sse -fvisibility=hidden -g  -O0 -DDEBUG -D_DEBUG
+    Linker flags (Release):      -Wl,--gc-sections  
+    Linker flags (Debug):        -Wl,--gc-sections  
+    ccache:                      NO
+    Precompiled headers:         NO
+    Extra dependencies:          opengl32 glu32
+    3rdparty dependencies:
+
+  OpenCV modules:
+    To be built:                 aruco bgsegm bioinspired calib3d ccalib core cvv datasets dnn dnn_objdetect dnn_superres dpm face features2d flann fuzzy gapi hfs highgui img_hash imgcodecs imgproc intensity_transform line_descriptor mcc ml objdetect optflow phase_unwrapping photo plot quality rapid reg rgbd saliency shape stereo stitching structured_light superres surface_matching text tracking ts video videoio videostab xfeatures2d ximgproc xobjdetect xphoto
+    Disabled:                    world
+    Disabled by dependency:      -
+    Unavailable:                 alphamat cnn_3dobj cudaarithm cudabgsegm cudacodec cudafeatures2d cudafilters cudaimgproc cudalegacy cudaobjdetect cudaoptflow cudastereo cudawarping cudev freetype hdf java js julia matlab ovis python2 python3 sfm viz
+    Applications:                tests perf_tests apps
+    Documentation:               NO
+    Non-free algorithms:         YES
+
+  Windows RT support:            NO
+
+  GUI: 
+    QT:                          YES (ver 5.13.0)
+      QT OpenGL support:         YES (Qt5::OpenGL 5.13.0)
+    Win32 UI:                    YES
+    OpenGL support:              YES (opengl32 glu32)
+    VTK support:                 NO
+
+  Media I/O: 
+    ZLib:                        build (ver 1.2.11)
+    JPEG:                        build-libjpeg-turbo (ver 2.0.5-62)
+    WEBP:                        build (ver encoder: 0x020f)
+    PNG:                         build (ver 1.6.37)
+    TIFF:                        build (ver 42 - 4.0.10)
+    JPEG 2000:                   build (ver 2.3.1)
+    OpenEXR:                     build (ver 2.3.0)
+    HDR:                         YES
+    SUNRASTER:                   YES
+    PXM:                         YES
+    PFM:                         YES
+
+  Video I/O:
+    DC1394:                      NO
+    FFMPEG:                      YES (prebuilt binaries)
+      avcodec:                   YES (58.91.100)
+      avformat:                  YES (58.45.100)
+      avutil:                    YES (56.51.100)
+      swscale:                   YES (5.7.100)
+      avresample:                YES (4.0.0)
+    GStreamer:                   NO
+    DirectShow:                  YES
+
+  Parallel framework:            none
+
+  Trace:                         YES (built-in)
+
+  Other third-party libraries:
+    Lapack:                      NO
+    Eigen:                       NO
+    Custom HAL:                  NO
+    Protobuf:                    build (3.5.1)
+
+  OpenCL:                        YES (no extra features)
+    Include path:                E:/opencv-4.5.0/opencv-4.5.0/3rdparty/include/opencl/1.2
+    Link libraries:              Dynamic load
+
+  Python (for build):            C:/Users/huihu/.windows-build-tools/python27/python.exe
+
+  Java:                          
+    ant:                         NO
+    JNI:                         C:/Program Files/Java/jdk1.8.0_191/include C:/Program Files/Java/jdk1.8.0_191/include/win32 C:/Program Files/Java/jdk1.8.0_191/include
+    Java wrappers:               NO
+    Java tests:                  NO
+
+  Install to:                    E:/opencv-4.5.0/opencv-4.5.0-qt-build/install
+-----------------------------------------------------------------
+```
+
+</details>
+
 ### [OpenCV 4.1.1-x64](https://github.com/huihut/OpenCV-MinGW-Build/tree/OpenCV-4.1.1-x64) | [zip](https://github.com/huihut/OpenCV-MinGW-Build/archive/OpenCV-4.1.1-x64.zip) | [tar.gz](https://github.com/huihut/OpenCV-MinGW-Build/archive/OpenCV-4.1.1-x64.tar.gz)
 
 ```
