@@ -4,7 +4,132 @@ MinGW 32bit and 64bit version of OpenCV compiled on Windows.
 
 ## Releases
 
-### [OpenCV-4.5.2-x64](https://github.com/huihut/OpenCV-MinGW-Build/tree/OpenCV-4.5.2-x64) | [zip](https://github.com/huihut/OpenCV-MinGW-Build/archive/OpenCV-4.5.2-x64.zip) | [tar.gz](https://github.com/huihut/OpenCV-MinGW-Build/archive/OpenCV-4.5.2-x64.tar.gz)
+### [OpenCV-4.5.5-x64](https://github.com/huihut/OpenCV-MinGW-Build/tree/OpenCV-4.5.5-x64) | [zip](https://github.com/huihut/OpenCV-MinGW-Build/archive/refs/tags/OpenCV-4.5.5-x64.zip) | [tar.gz](https://github.com/huihut/OpenCV-MinGW-Build/archive/refs/tags/OpenCV-4.5.5-x64.tar.gz)
+
+```
+git clone -b OpenCV-4.5.5-x64 git@github.com:huihut/OpenCV-MinGW-Build.git
+```
+
+<details><summary>Configuration</summary> 
+
+* MinGW-W64 x86_64-posix-seh
+* Windows-11-64bit-22000.434
+* CMake-3.21.3
+
+```
+General configuration for OpenCV 4.5.5-dev =====================================
+  Version control:               4.5.5-85-g9e3ba487fa
+
+  Platform:
+    Timestamp:                   2022-01-28T21:25:24Z
+    Host:                        Windows 10.0.22000 AMD64
+    CMake:                       3.21.3
+    CMake generator:             MinGW Makefiles
+    CMake build tool:            C:/ProgramData/chocolatey/bin/mingw32-make.exe
+    Configuration:               Release
+
+  CPU/HW features:
+    Baseline:                    SSE SSE2 SSE3
+      requested:                 SSE3
+    Dispatched code generation:  SSE4_1 SSE4_2 FP16 AVX AVX2 AVX512_SKX
+      requested:                 SSE4_1 SSE4_2 AVX FP16 AVX2 AVX512_SKX
+      SSE4_1 (18 files):         + SSSE3 SSE4_1
+      SSE4_2 (2 files):          + SSSE3 SSE4_1 POPCNT SSE4_2
+      FP16 (1 files):            + SSSE3 SSE4_1 POPCNT SSE4_2 FP16 AVX
+      AVX (5 files):             + SSSE3 SSE4_1 POPCNT SSE4_2 AVX
+      AVX2 (33 files):           + SSSE3 SSE4_1 POPCNT SSE4_2 FP16 FMA3 AVX AVX2
+      AVX512_SKX (8 files):      + SSSE3 SSE4_1 POPCNT SSE4_2 FP16 FMA3 AVX AVX2 AVX_512F AVX512_COMMON AVX512_SKX
+
+  C/C++:
+    Built as dynamic libs?:      YES
+    C++ standard:                11
+    C++ Compiler:                C:/ProgramData/chocolatey/bin/g++.exe  (ver 11.2.0)
+    C++ flags (Release):         -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -O3 -DNDEBUG  -DNDEBUG
+    C++ flags (Debug):           -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Wsuggest-override -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -g  -O0 -DDEBUG -D_DEBUG
+    C Compiler:                  C:/ProgramData/chocolatey/bin/gcc.exe
+    C flags (Release):           -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -O3 -DNDEBUG  -DNDEBUG
+    C flags (Debug):             -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Wno-comment -Wimplicit-fallthrough=3 -Wno-strict-overflow -fdiagnostics-show-option -Wno-long-long -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -g  -O0 -DDEBUG -D_DEBUG
+    Linker flags (Release):      -Wl,--gc-sections  
+    Linker flags (Debug):        -Wl,--gc-sections  
+    ccache:                      NO
+    Precompiled headers:         NO
+    Extra dependencies:
+    3rdparty dependencies:
+
+  OpenCV modules:
+    To be built:                 calib3d core dnn features2d flann gapi highgui imgcodecs imgproc ml objdetect photo python3 stitching ts video videoio
+    Disabled:                    world
+    Disabled by dependency:      -
+    Unavailable:                 java python2
+    Applications:                tests perf_tests apps
+    Documentation:               NO
+    Non-free algorithms:         NO
+
+  Windows RT support:            NO
+
+  GUI:                           WIN32UI
+    Win32 UI:                    YES
+    VTK support:                 NO
+
+  Media I/O: 
+    ZLib:                        build (ver 1.2.11)
+    JPEG:                        build-libjpeg-turbo (ver 2.1.2-62)
+    WEBP:                        build (ver encoder: 0x020f)
+    PNG:                         build (ver 1.6.37)
+    TIFF:                        build (ver 42 - 4.2.0)
+    JPEG 2000:                   build (ver 2.4.0)
+    OpenEXR:                     build (ver 2.3.0)
+    HDR:                         YES
+    SUNRASTER:                   YES
+    PXM:                         YES
+    PFM:                         YES
+
+  Video I/O:
+    DC1394:                      NO
+    FFMPEG:                      YES (prebuilt binaries)
+      avcodec:                   YES (58.134.100)
+      avformat:                  YES (58.76.100)
+      avutil:                    YES (56.70.100)
+      swscale:                   YES (5.9.100)
+      avresample:                YES (4.0.0)
+    GStreamer:                   NO
+    DirectShow:                  YES
+
+  Parallel framework:            none
+
+  Trace:                         YES (built-in)
+
+  Other third-party libraries:
+    Lapack:                      NO
+    Eigen:                       NO
+    Custom HAL:                  NO
+    Protobuf:                    build (3.19.1)
+
+  OpenCL:                        YES (no extra features)
+    Include path:                C:/Users/m8317/Downloads/opencv_mingw/opencv/3rdparty/include/opencl/1.2
+    Link libraries:              Dynamic load
+
+  Python 3:
+    Interpreter:                 C:/Users/m8317/AppData/Local/Programs/Python/Python39/python.exe (ver 3.9.9)
+    Libraries:                   C:/Users/m8317/AppData/Local/Programs/Python/Python39/libs/python39.lib (ver 3.9.9)
+    numpy:                       C:/Users/m8317/AppData/Local/Programs/Python/Python39/lib/site-packages/numpy/core/include (ver 1.21.0)
+    install path:                C:/Users/m8317/AppData/Local/Programs/Python/Python39/Lib/site-packages/cv2/python-3.9
+
+  Python (for build):            C:/Users/m8317/AppData/Local/Programs/Python/Python39/python.exe
+
+  Java:                          
+    ant:                         NO
+    JNI:                         C:/Program Files/AdoptOpenJDK/jdk-11.0.11.9-hotspot/include C:/Program Files/AdoptOpenJDK/jdk-11.0.11.9-hotspot/include/win32 C:/Program Files/AdoptOpenJDK/jdk-11.0.11.9-hotspot/include
+    Java wrappers:               NO
+    Java tests:                  NO
+
+  Install to:                    C:/Users/m8317/Downloads/opencv_mingw/opencv/build/install
+-----------------------------------------------------------------
+```
+
+</details>
+
+### [OpenCV-4.5.2-x64](https://github.com/huihut/OpenCV-MinGW-Build/tree/OpenCV-4.5.2-x64) | [zip](https://github.com/huihut/OpenCV-MinGW-Build/archive/refs/tags/OpenCV-4.5.2-x64.zip) | [tar.gz](https://github.com/huihut/OpenCV-MinGW-Build/archive/refs/tags/OpenCV-4.5.2-x64.tar.gz)
 
 ```
 git clone -b OpenCV-4.5.2-x64 git@github.com:huihut/OpenCV-MinGW-Build.git
@@ -122,7 +247,7 @@ General configuration for OpenCV 4.5.2 =====================================
 
 </details>
 
-### [OpenCV-4.5.0-with-contrib](https://github.com/huihut/OpenCV-MinGW-Build/tree/OpenCV-4.5.0-with-contrib) | [zip](https://github.com/huihut/OpenCV-MinGW-Build/archive/OpenCV-4.5.0-with-contrib.zip) | [tar.gz](https://github.com/huihut/OpenCV-MinGW-Build/archive/OpenCV-4.5.0-with-contrib.tar.gz)
+### [OpenCV-4.5.0-with-contrib](https://github.com/huihut/OpenCV-MinGW-Build/tree/OpenCV-4.5.0-with-contrib) | [zip](https://github.com/huihut/OpenCV-MinGW-Build/archive/refs/tags/OpenCV-4.5.0-with-contrib.zip) | [tar.gz](https://github.com/huihut/OpenCV-MinGW-Build/archive/refs/tags/OpenCV-4.5.0-with-contrib.tar.gz)
 
 ```
 git clone -b OpenCV-4.5.0-with-contrib git@github.com:huihut/OpenCV-MinGW-Build.git
@@ -246,7 +371,7 @@ General configuration for OpenCV 4.5.0 =====================================
 
 </details>
 
-### [OpenCV 4.1.1-x64](https://github.com/huihut/OpenCV-MinGW-Build/tree/OpenCV-4.1.1-x64) | [zip](https://github.com/huihut/OpenCV-MinGW-Build/archive/OpenCV-4.1.1-x64.zip) | [tar.gz](https://github.com/huihut/OpenCV-MinGW-Build/archive/OpenCV-4.1.1-x64.tar.gz)
+### [OpenCV 4.1.1-x64](https://github.com/huihut/OpenCV-MinGW-Build/tree/OpenCV-4.1.1-x64) | [zip](https://github.com/huihut/OpenCV-MinGW-Build/archive/refs/tags/OpenCV-4.1.1-x64.zip) | [tar.gz](https://github.com/huihut/OpenCV-MinGW-Build/archive/refs/tags/OpenCV-4.1.1-x64.tar.gz)
 
 ```
 git clone -b OpenCV-4.1.1-x64 git@github.com:huihut/OpenCV-MinGW-Build.git
@@ -364,7 +489,7 @@ General configuration for OpenCV 4.1.1 =====================================
 
 </details>
 
-### [OpenCV 4.1.0-x64](https://github.com/huihut/OpenCV-MinGW-Build/tree/OpenCV-4.1.0-x64) | [zip](https://github.com/huihut/OpenCV-MinGW-Build/archive/OpenCV-4.1.0-x64.zip) | [tar.gz](https://github.com/huihut/OpenCV-MinGW-Build/archive/OpenCV-4.1.0-x64.tar.gz)
+### [OpenCV 4.1.0-x64](https://github.com/huihut/OpenCV-MinGW-Build/tree/OpenCV-4.1.0-x64) | [zip](https://github.com/huihut/OpenCV-MinGW-Build/archive/refs/tags/OpenCV-4.1.0-x64.zip) | [tar.gz](https://github.com/huihut/OpenCV-MinGW-Build/archive/refs/tags/OpenCV-4.1.0-x64.tar.gz)
 
 ```
 git clone -b OpenCV-4.1.0-x64 git@github.com:huihut/OpenCV-MinGW-Build.git
@@ -482,7 +607,7 @@ General configuration for OpenCV 4.1.0 =====================================
 
 </details>
 
-### [OpenCV 4.1.0](https://github.com/huihut/OpenCV-MinGW-Build/tree/OpenCV-4.1.0) | [zip](https://github.com/huihut/OpenCV-MinGW-Build/archive/OpenCV-4.1.0.zip) | [tar.gz](https://github.com/huihut/OpenCV-MinGW-Build/archive/OpenCV-4.1.0.tar.gz)
+### [OpenCV 4.1.0](https://github.com/huihut/OpenCV-MinGW-Build/tree/OpenCV-4.1.0) | [zip](https://github.com/huihut/OpenCV-MinGW-Build/archive/refs/tags/OpenCV-4.1.0.zip) | [tar.gz](https://github.com/huihut/OpenCV-MinGW-Build/archive/refs/tags/OpenCV-4.1.0.tar.gz)
 
 ```
 git clone -b OpenCV-4.1.0 git@github.com:huihut/OpenCV-MinGW-Build.git
@@ -601,7 +726,7 @@ General configuration for OpenCV 4.1.0 =====================================
 
 </details>
 
-### [OpenCV 4.0.1-x64](https://github.com/huihut/OpenCV-MinGW-Build/tree/OpenCV-4.0.1-x64) | [zip](https://github.com/huihut/OpenCV-MinGW-Build/archive/OpenCV-4.0.1-x64.zip) | [tar.gz](https://github.com/huihut/OpenCV-MinGW-Build/archive/OpenCV-4.0.1-x64.tar.gz)
+### [OpenCV 4.0.1-x64](https://github.com/huihut/OpenCV-MinGW-Build/tree/OpenCV-4.0.1-x64) | [zip](https://github.com/huihut/OpenCV-MinGW-Build/archive/refs/tags/OpenCV-4.0.1-x64.zip) | [tar.gz](https://github.com/huihut/OpenCV-MinGW-Build/archive/refs/tags/OpenCV-4.0.1-x64.tar.gz)
 
 ```
 git clone -b OpenCV-4.0.1-x64 git@github.com:huihut/OpenCV-MinGW-Build.git
@@ -718,7 +843,7 @@ General configuration for OpenCV 4.0.1 =====================================
 
 </details>
 
-### [OpenCV 4.0.0-rc-x64](https://github.com/huihut/OpenCV-MinGW-Build/tree/OpenCV-4.0.0-rc-x64) | [zip](https://github.com/huihut/OpenCV-MinGW-Build/archive/OpenCV-4.0.0-rc-x64.zip) | [tar.gz](https://github.com/huihut/OpenCV-MinGW-Build/archive/OpenCV-4.0.0-rc-x64.tar.gz)
+### [OpenCV 4.0.0-rc-x64](https://github.com/huihut/OpenCV-MinGW-Build/tree/OpenCV-4.0.0-rc-x64) | [zip](https://github.com/huihut/OpenCV-MinGW-Build/archive/refs/tags/OpenCV-4.0.0-rc-x64.zip) | [tar.gz](https://github.com/huihut/OpenCV-MinGW-Build/archive/refs/tags/OpenCV-4.0.0-rc-x64.tar.gz)
 
 ```
 git clone -b OpenCV-4.0.0-rc-x64 git@github.com:huihut/OpenCV-MinGW-Build.git
@@ -835,7 +960,7 @@ General configuration for OpenCV 4.0.0-rc =====================================
 
 </details>
 
-### [OpenCV 4.0.0-alpha-x64](https://github.com/huihut/OpenCV-MinGW-Build/tree/OpenCV-4.0.0-alpha-x64) | [zip](https://github.com/huihut/OpenCV-MinGW-Build/archive/OpenCV-4.0.0-alpha-x64.zip) | [tar.gz](https://github.com/huihut/OpenCV-MinGW-Build/archive/OpenCV-4.0.0-alpha-x64.tar.gz)
+### [OpenCV 4.0.0-alpha-x64](https://github.com/huihut/OpenCV-MinGW-Build/tree/OpenCV-4.0.0-alpha-x64) | [zip](https://github.com/huihut/OpenCV-MinGW-Build/archive/refs/tags/OpenCV-4.0.0-alpha-x64.zip) | [tar.gz](https://github.com/huihut/OpenCV-MinGW-Build/archive/refs/tags/OpenCV-4.0.0-alpha-x64.tar.gz)
 
 ```
 git clone -b OpenCV-4.0.0-alpha-x64 git@github.com:huihut/OpenCV-MinGW-Build.git
@@ -953,7 +1078,7 @@ General configuration for OpenCV 4.0.0-alpha ===================================
 
 </details>
 
-### [OpenCV 3.4.9](https://github.com/huihut/OpenCV-MinGW-Build/tree/OpenCV-3.4.9) | [zip](https://github.com/huihut/OpenCV-MinGW-Build/archive/OpenCV-3.4.9.zip) | [tar.gz](https://github.com/huihut/OpenCV-MinGW-Build/archive/OpenCV-3.4.9.tar.gz)
+### [OpenCV 3.4.9](https://github.com/huihut/OpenCV-MinGW-Build/tree/OpenCV-3.4.9) | [zip](https://github.com/huihut/OpenCV-MinGW-Build/archive/refs/tags/OpenCV-3.4.9.zip) | [tar.gz](https://github.com/huihut/OpenCV-MinGW-Build/archive/refs/tags/OpenCV-3.4.9.tar.gz)
 ```
 git clone -b OpenCV-3.4.9 git@github.com:huihut/OpenCV-MinGW-Build.git
 ```
@@ -1070,7 +1195,7 @@ General configuration for OpenCV 3.4.9 =====================================
 ```
 </details>
 
-### [OpenCV 3.4.8 x64](https://github.com/huihut/OpenCV-MinGW-Build/tree/OpenCV-3.4.8-x64) | [zip](https://github.com/huihut/OpenCV-MinGW-Build/archive/OpenCV-3.4.8-x64.zip) | [tar.gz](https://github.com/huihut/OpenCV-MinGW-Build/archive/OpenCV-3.4.8-x64.tar.gz)
+### [OpenCV 3.4.8 x64](https://github.com/huihut/OpenCV-MinGW-Build/tree/OpenCV-3.4.8-x64) | [zip](https://github.com/huihut/OpenCV-MinGW-Build/archive/refs/tags/OpenCV-3.4.8-x64.zip) | [tar.gz](https://github.com/huihut/OpenCV-MinGW-Build/archive/refs/tags/OpenCV-3.4.8-x64.tar.gz)
 ```
 git clone -b OpenCV-3.4.8-x64 git@github.com:huihut/OpenCV-MinGW-Build.git
 ```
@@ -1186,7 +1311,7 @@ General configuration for OpenCV 3.4.8 =====================================
 </details>
 
 
-### [OpenCV 3.4.7](https://github.com/huihut/OpenCV-MinGW-Build/tree/OpenCV-3.4.7) | [zip](https://github.com/huihut/OpenCV-MinGW-Build/archive/OpenCV-3.4.7.zip) | [tar.gz](https://github.com/huihut/OpenCV-MinGW-Build/archive/OpenCV-3.4.7.tar.gz)
+### [OpenCV 3.4.7](https://github.com/huihut/OpenCV-MinGW-Build/tree/OpenCV-3.4.7) | [zip](https://github.com/huihut/OpenCV-MinGW-Build/archive/refs/tags/OpenCV-3.4.7.zip) | [tar.gz](https://github.com/huihut/OpenCV-MinGW-Build/archive/refs/tags/OpenCV-3.4.7.tar.gz)
 
 ```
 git clone -b OpenCV-3.4.7 git@github.com:huihut/OpenCV-MinGW-Build.git
@@ -1304,7 +1429,7 @@ General configuration for OpenCV 3.4.7 =====================================
 ```
 </details>
 
-### [OpenCV 3.4.6](https://github.com/huihut/OpenCV-MinGW-Build/tree/OpenCV-3.4.6) | [zip](https://github.com/huihut/OpenCV-MinGW-Build/archive/OpenCV-3.4.6.zip) | [tar.gz](https://github.com/huihut/OpenCV-MinGW-Build/archive/OpenCV-3.4.6.tar.gz)
+### [OpenCV 3.4.6](https://github.com/huihut/OpenCV-MinGW-Build/tree/OpenCV-3.4.6) | [zip](https://github.com/huihut/OpenCV-MinGW-Build/archive/refs/tags/OpenCV-3.4.6.zip) | [tar.gz](https://github.com/huihut/OpenCV-MinGW-Build/archive/refs/tags/OpenCV-3.4.6.tar.gz)
 
 ```
 git clone -b OpenCV-3.4.6 git@github.com:huihut/OpenCV-MinGW-Build.git
@@ -1422,7 +1547,7 @@ General configuration for OpenCV 3.4.6 =====================================
 ```
 </details>
 
-### [OpenCV 3.4.5](https://github.com/huihut/OpenCV-MinGW-Build/tree/OpenCV-3.4.5) | [zip](https://github.com/huihut/OpenCV-MinGW-Build/archive/OpenCV-3.4.5.zip) | [tar.gz](https://github.com/huihut/OpenCV-MinGW-Build/archive/OpenCV-3.4.5.tar.gz)
+### [OpenCV 3.4.5](https://github.com/huihut/OpenCV-MinGW-Build/tree/OpenCV-3.4.5) | [zip](https://github.com/huihut/OpenCV-MinGW-Build/archive/refs/tags/OpenCV-3.4.5.zip) | [tar.gz](https://github.com/huihut/OpenCV-MinGW-Build/archive/refs/tags/OpenCV-3.4.5.tar.gz)
 
 ```
 git clone -b OpenCV-3.4.5 git@github.com:huihut/OpenCV-MinGW-Build.git
@@ -1540,7 +1665,7 @@ General configuration for OpenCV 3.4.5 =====================================
 ```
 </details>
 
-### [OpenCV 3.4.1-x64](https://github.com/huihut/OpenCV-MinGW-Build/tree/OpenCV-3.4.1-x64)  | [zip](https://github.com/huihut/OpenCV-MinGW-Build/archive/OpenCV-3.4.1-x64.zip) | [tar.gz](https://github.com/huihut/OpenCV-MinGW-Build/archive/OpenCV-3.4.1-x64.tar.gz)
+### [OpenCV 3.4.1-x64](https://github.com/huihut/OpenCV-MinGW-Build/tree/OpenCV-3.4.1-x64)  | [zip](https://github.com/huihut/OpenCV-MinGW-Build/archive/refs/tags/OpenCV-3.4.1-x64.zip) | [tar.gz](https://github.com/huihut/OpenCV-MinGW-Build/archive/refs/tags/OpenCV-3.4.1-x64.tar.gz)
 
 ```
 git clone -b OpenCV-3.4.1-x64 git@github.com:huihut/OpenCV-MinGW-Build.git
@@ -1660,7 +1785,7 @@ General configuration for OpenCV 3.4.1 =====================================
 
 </details>
 
-### [OpenCV 3.4.1](https://github.com/huihut/OpenCV-MinGW-Build/tree/OpenCV-3.4.1) | [zip](https://github.com/huihut/OpenCV-MinGW-Build/archive/OpenCV-3.4.1.zip) | [tar.gz](https://github.com/huihut/OpenCV-MinGW-Build/archive/OpenCV-3.4.1.tar.gz)
+### [OpenCV 3.4.1](https://github.com/huihut/OpenCV-MinGW-Build/tree/OpenCV-3.4.1) | [zip](https://github.com/huihut/OpenCV-MinGW-Build/archive/refs/tags/OpenCV-3.4.1.zip) | [tar.gz](https://github.com/huihut/OpenCV-MinGW-Build/archive/refs/tags/OpenCV-3.4.1.tar.gz)
 
 ```
 git clone -b OpenCV-3.4.1 git@github.com:huihut/OpenCV-MinGW-Build.git
@@ -1674,7 +1799,7 @@ git clone -b OpenCV-3.4.1 git@github.com:huihut/OpenCV-MinGW-Build.git
 
 </details>
 
-### [OpenCV 3.3.1](https://github.com/huihut/OpenCV-MinGW-Build/tree/OpenCV-3.3.1) | [zip](https://github.com/huihut/OpenCV-MinGW-Build/archive/OpenCV-3.3.1.zip) | [tar.gz](https://github.com/huihut/OpenCV-MinGW-Build/archive/OpenCV-3.3.1.tar.gz)
+### [OpenCV 3.3.1](https://github.com/huihut/OpenCV-MinGW-Build/tree/OpenCV-3.3.1) | [zip](https://github.com/huihut/OpenCV-MinGW-Build/archive/refs/tags/OpenCV-3.3.1.zip) | [tar.gz](https://github.com/huihut/OpenCV-MinGW-Build/archive/refs/tags/OpenCV-3.3.1.tar.gz)
 
 ```
 git clone -b OpenCV-3.3.1 git@github.com:huihut/OpenCV-MinGW-Build.git
